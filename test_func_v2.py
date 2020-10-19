@@ -93,5 +93,4 @@ def detector(img, model,image_size = 1024):
 
     marker_mean[marker_mean < 0.1] = 0
     coordinates = peak_local_max(np.squeeze(marker_mean), min_distance=5)
-    return coordinates
-a
+    return marker_mean,  coordinates
